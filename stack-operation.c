@@ -56,7 +56,7 @@ void display(struct STACK *s)
     else
     {
         int i;
-        for ( i = s->top; i >= 0; i--)
+        for (i = s->top; i >= 0; i--)
         {
             printf("%d\n", s->stack[i]);
         }

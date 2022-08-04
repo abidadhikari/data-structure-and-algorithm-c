@@ -40,10 +40,11 @@ void display(struct CQUEUE *q)
     else
     {
         int i;
-        for (i = q->front; i <= q->rear; i = (i + 1) % MAX)
+        for (i = (q->front + 1) % MAX; i != q->rear; i = (i + 1) % MAX)
         {
             printf("%d\t", q->queue[i]);
         }
+        printf("%d\t", q->queue[i]);
     }
 }
 

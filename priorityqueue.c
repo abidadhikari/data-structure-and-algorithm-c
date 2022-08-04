@@ -61,7 +61,7 @@ void dequeue()
             for (j = i; j < rear; j++)
             {
                 pr[j].value = pr[j + 1].value;
-                pr[i].priority = pr[j + 1].priority;
+                pr[j].priority = pr[j + 1].priority;
             }
         }
         rear--;
@@ -96,7 +96,7 @@ void menu()
     printf("\n---------------------\n");
 }
 
-void main()
+int main()
 {
     int exit = 1, v, p;
     while (exit != 5)
@@ -135,11 +135,10 @@ void main()
             break;
         case 5:
         default:
-
             exit = 5;
+            printf("\n------MENU EXIT------\n");
             break;
         }
     }
+    return 0;
 }
-
-// printf("\n------MENU EXIT------\n");
